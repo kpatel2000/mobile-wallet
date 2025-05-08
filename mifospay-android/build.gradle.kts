@@ -51,10 +51,10 @@ android {
         // Disabling proguard for now until
         // https://github.com/openMF/mobile-wallet/issues/1815 this issue is resolved
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             applicationIdSuffix = MifosBuildType.RELEASE.applicationIdSuffix
-            isShrinkResources = false
-            isDebuggable = false
+            isShrinkResources = true
+            isDebuggable = true
             isJniDebuggable = false
             signingConfig = signingConfigs.getByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
